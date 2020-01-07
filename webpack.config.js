@@ -42,6 +42,7 @@ const ra = {
     path: path.resolve('./dist'),
     filename: 'node.js',
     libraryTarget: 'umd',
+    libraryExport: 'default',
     library: 'JsonApiMerge',
   },
   externals: {
@@ -89,6 +90,7 @@ const raMin = {
     path: path.resolve('./dist'),
     filename: 'node.min.js',
     libraryTarget: 'umd',
+    libraryExport: 'default',
     library: 'JsonApiMerge',
   },
   externals: {
@@ -136,6 +138,7 @@ const raWeb = {
     path: path.resolve('./dist'),
     filename: 'web.js',
     libraryTarget: 'umd',
+    libraryExport: 'default',
     library: 'JsonApiMerge',
   },
   externals: {
@@ -180,6 +183,7 @@ const raWebMin = {
     path: path.resolve('./dist'),
     filename: 'web.min.js',
     libraryTarget: 'umd',
+    libraryExport: 'default',
     library: 'JsonApiMerge',
   },
   externals: {
@@ -224,6 +228,7 @@ const raWebStandalone = {
     path: path.resolve('./dist'),
     filename: 'web.standalone.js',
     libraryTarget: 'umd',
+    libraryExport: 'default',
     library: 'JsonApiMerge',
   },
   module: {
@@ -264,6 +269,7 @@ const rawWebStandaloneMin = {
     path: path.resolve('./dist'),
     filename: 'web.standalone.min.js',
     libraryTarget: 'umd',
+    libraryExport: 'default',
     library: 'JsonApiMerge',
   },
   module: {

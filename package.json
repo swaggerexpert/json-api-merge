@@ -22,7 +22,7 @@
     "url": "https://www.linkedin.com/in/vladimirgorej/"
   },
   "sideEffects": false,
-  "main": "./lib/index.js",
+  "main": "./dist/node.js",
   "module": "./es/index.js",
   "jsnext:main": "./es/index.js",
   "types": "types/index.d.ts",
