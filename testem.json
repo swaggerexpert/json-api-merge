@@ -1,0 +1,5 @@
+{
+  "test_page": "./test/mocha-testem.mustache",
+  "before_tests": "npm run test:bundle-create",
+  "after_tests": "npm run test:bundle-clean"
+}

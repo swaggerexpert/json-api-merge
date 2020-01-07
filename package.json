@@ -1,0 +1,131 @@
+{
+  "name": "json-api-merge",
+  "description": "JSON:API specific algorithm for merging included resources into original data.",
+  "keywords": [
+    "json:api",
+    "merge",
+    "included"
+  ],
+  "version": "0.1.0",
+  "homepage": "https://github.com/char0n/json-api-merge",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/char0n/json-api-merge.git"
+  },
+  "engines": {
+    "node": ">=0.10.3"
+  },
+  "author": {
+    "name": "Vladimir Gorej",
+    "email": "vladimir.gorej@gmail.com",
+    "url": "https://www.linkedin.com/in/vladimirgorej/"
+  },
+  "sideEffects": false,
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "jsnext:main": "./es/index.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "lint": "better-npm-run lint",
+    "lint:fix": "better-npm-run lint:fix",
+    "test": "better-npm-run test",
+    "test:web": "better-npm-run test:web",
+    "test:types": "dtslint ./types",
+    "test:bundle-create": "better-npm-run test:bundle-create",
+    "test:bundle-clean": "better-npm-run test:bundle-clean",
+    "coverage": "better-npm-run coverage",
+    "build": "better-npm-run build",
+    "build:es": "better-npm-run build:es",
+    "build:commonjs": "better-npm-run build:commonjs",
+    "build:umd": "better-npm-run build:umd",
+    "prepublishOnly": "better-npm-run prepublishOnly",
+    "clean": "better-npm-run clean"
+  },
+  "betterScripts": {
+    "lint": "eslint ./ && tslint --project types/tsconfig.json -c types/tslint.json types/**/*.ts",
+    "lint:fix": "eslint ./ --fix && tslint --fix --project types/tsconfig.json -c types/tslint.json types/**/*.ts",
+    "test": {
+      "command": "mocha",
+      "env": {
+        "BABEL_ENV": "commonjs"
+      }
+    },
+    "test:web": "testem ci",
+    "test:bundle-create": "webpack --config webpack.config-test.web.js --progress",
+    "test:bundle-clean": "rimraf tmp-test-bundle.js",
+    "coverage": {
+      "command": "nyc mocha",
+      "env": {
+        "BABEL_ENV": "coverage"
+      }
+    },
+    "build": "npm run build:es && npm run build:commonjs && npm run build:umd",
+    "build:es": {
+      "command": "babel src --out-dir es",
+      "env": {
+        "BABEL_ENV": "es"
+      }
+    },
+    "build:commonjs": {
+      "command": "babel src --out-dir lib",
+      "env": {
+        "BABEL_ENV": "commonjs"
+      }
+    },
+    "build:umd": "webpack --config webpack.config.js --progress",
+    "prepublishOnly": "npm run clean && npm run lint && npm run test && npm run test:web && npm run build && npm run docs",
+    "clean": "rimraf .nyc_output .tmp docs coverage tmp-test-bundle.js dist lib es"
+  },
+  "readme": "README.md",
+  "peerDependencies": {
+    "ramda": ">= 0.19.0 <= 0.26.1",
+    "ramda-adjunct": ">=0.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.7.7",
+    "@babel/core": "7.7.7",
+    "@babel/plugin-transform-modules-commonjs": "7.7.5",
+    "@babel/polyfill": "7.7.0",
+    "@babel/preset-env": "7.7.7",
+    "@babel/register": "7.7.7",
+    "@commitlint/cli": "8.2.0",
+    "@commitlint/config-conventional": "8.2.0",
+    "babel-loader": "8.0.6",
+    "babel-plugin-annotate-pure-calls": "0.4.0",
+    "babel-plugin-istanbul": "6.0.0",
+    "better-npm-run": "0.1.1",
+    "chai": "4.2.0",
+    "codecov": "3.6.1",
+    "dtslint": "=2.0.4",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-base": "=14.0.0",
+    "eslint-config-prettier": "6.9.0",
+    "eslint-plugin-import": "=2.19.1",
+    "eslint-plugin-mocha": "6.2.2",
+    "eslint-plugin-prettier": "3.1.2",
+    "eslint-plugin-ramda": "2.5.1",
+    "glob": "7.1.6",
+    "husky": "3.1.0",
+    "istanbul": "=0.4.5",
+    "license-cli": "1.1.6",
+    "lint-staged": "9.5.0",
+    "mocha": "6.2.2",
+    "mocha-junit-reporter": "1.23.1",
+    "mocha-multi-reporters": "1.1.7",
+    "nyc": "15.0.0",
+    "prettier": "=1.19.1",
+    "ramda": "=0.26.1",
+    "ramda-adjunct": "=2.23.0",
+    "rimraf": "3.0.0",
+    "sinon": "8.0.2",
+    "terser-webpack-plugin": "2.3.1",
+    "testem": "3.0.2",
+    "tslint": "=5.14.0",
+    "typescript": "=3.7.4",
+    "webpack": "4.41.5",
+    "webpack-cli": "3.3.10"
+  },
+  "browserslist": "> 0.25%, ie 10, ie 11, not op_mini all",
+  "tonicExampleFilename": "tonicExample.js"
+}

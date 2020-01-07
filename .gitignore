@@ -1,0 +1,12 @@
+/.idea
+/.tmp
+/.nyc_output
+/node_modules
+/npm-debug.log
+/coverage
+/tmp-test-bundle.js
+/test-results.xml
+/es
+/lib
+/dist
+/json-api-merge-*.*.*.tgz
