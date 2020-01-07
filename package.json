@@ -74,8 +74,8 @@
       }
     },
     "build:umd": "webpack --config webpack.config.js --progress",
-    "prepublishOnly": "npm run clean && npm run lint && npm run test && npm run test:web && npm run build && npm run docs",
-    "clean": "rimraf .nyc_output .tmp docs coverage tmp-test-bundle.js dist lib es json-api-merge-0.1.0.tgz test-results.xml"
+    "prepublishOnly": "npm run clean && npm run lint && npm run test && npm run test:web && npm run build",
+    "clean": "rimraf .nyc_output .tmp coverage tmp-test-bundle.js dist lib es json-api-merge-0.1.0.tgz test-results.xml"
   },
   "readme": "README.md",
   "peerDependencies": {
