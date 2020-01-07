@@ -1,6 +1,6 @@
 # JSON API Merge
 
-JSON API Merge is a JSON:API specific algorithm for merging included resources into original data.
+`json-api-merge` is a JSON:API specific algorithm for merging included resources into original data.
 
 ### Getting Started
 
