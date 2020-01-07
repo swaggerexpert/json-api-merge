@@ -16,7 +16,7 @@ yarn add json-api-merge
 
 ### Usage
 
-#### ES7
+#### ES2O19
 
 ```js
 const jsonApiData = {
@@ -193,7 +193,7 @@ We're using [eslint](https://eslint.org/) and [airbnb codestyle](https://github.
 
 ## Typescript support
 
-Although json-api-merge is written in ES2017, we also support **Typescript**. When json-api-merge gets imported into a Typescript project, typings are automatically imported and used.
+Although json-api-merge is written in ES2019, we also support **Typescript**. When json-api-merge gets imported into a Typescript project, typings are automatically imported and used.
 
 ## Author
 
