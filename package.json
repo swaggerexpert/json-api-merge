@@ -6,7 +6,7 @@
     "merge",
     "included"
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/char0n/json-api-merge",
   "license": "BSD-3-Clause",
   "repository": {
