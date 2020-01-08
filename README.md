@@ -7,11 +7,11 @@
 ### Installation
 
 ```sh
-npm i json-api-merge
+npm i @char0n/json-api-merge
 ```
 or
 ```sh
-yarn add json-api-merge
+yarn add @char0n/json-api-merge
 ```
 
 ### Usage
@@ -49,7 +49,7 @@ const jsonApiData = {
 
 
 ```javascript
-import jsonApiMerge from 'json-api-merge'
+import jsonApiMerge from '@char0n/json-api-merge'
 
 jsonApiMerge(jsonApiData.included, jsonApiData.data)
 ```
@@ -57,7 +57,7 @@ jsonApiMerge(jsonApiData.included, jsonApiData.data)
 #### Node
 
 ```javascript
-const jsonApiMerge = require('json-api-merge');
+const jsonApiMerge = require('@char0n/json-api-merge');
 
 jsonApiMerge(jsonApiData.included, jsonApiData.data);
 ```

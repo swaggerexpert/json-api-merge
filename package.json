@@ -1,5 +1,5 @@
 {
-  "name": "json-api-merge",
+  "name": "@char0n/json-api-merge",
   "description": "JSON:API specific algorithm for merging included resources into original data.",
   "keywords": [
     "json:api",
