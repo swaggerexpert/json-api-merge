@@ -29,7 +29,7 @@ const getRelationships = pipe(propOr({}, ['relationships']), keys);
 // resourceKey :: ResourceRel -> ResourceKey
 const resourceKey = ({ type, id }) => `${type}-${id}`;
 
-// createIncludedCache :: Included -> {ResourceKey: Resource}
+// createIncludedCache :: Included -> IncludedCache
 const createIncludedCache = reduce(
   (acc, resource) => assoc(resourceKey(resource), resource, acc),
   {}
