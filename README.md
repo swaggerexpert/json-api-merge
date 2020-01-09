@@ -4,6 +4,13 @@
 
 ### Getting Started
 
+## Requirements
+
+Peer dependencies of [Ramda](https://github.com/ramda/ramda) and [RamdaAdjunct](https://github.com/char0n/ramda-adjunct).
+
+ - ramda >= 0.19.0 <= 0.26.1
+ - ramda-adjunct >=0.3.0
+
 ### Installation
 
 ```sh
@@ -148,13 +155,6 @@ const jsonApiData = [
 I was looking for a simple way how to merge the `included` into `data` without compromising data
 structures. All other libraries that I tested were opionated about how the resulting merge should look like.
 This library has no opinion and simply merged the `included` into `data`. It does nothing else.
-
-## Requirements
-
-Peer dependencies of [Ramda](https://github.com/ramda/ramda) and [RamdaAdjunct](https://github.com/char0n/ramda-adjunct).
-
- - ramda >= 0.19.0 <= 0.26.1
- - ramda-adjunct >=0.3.0
 
 ## Contributing
 
