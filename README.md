@@ -92,7 +92,7 @@ Result would be following data structure.
 }
 ```
 
-The library can also process data in list format and can transform this:
+The library can also process data in **list** format and can transform this:
 
 ```js
 {
@@ -122,7 +122,7 @@ The library can also process data in list format and can transform this:
       },
     },
   ],
-};
+}
 ```
 
 into this:
@@ -147,7 +147,7 @@ into this:
       },
     },
   }
-];
+]
 ```
 
 ## Motivation
