@@ -1,10 +1,10 @@
 # JSON API Merge
 
-`json-api-merge` is a JSON:API specific algorithm for merging included resources into original data.
+`json-api-merge` is a JSON:API specific redundant duplication algorithm for merging included resources into original data.
 
-### Getting Started
+## Getting Started
 
-## Requirements
+### Requirements
 
 Peer dependencies of [Ramda](https://github.com/ramda/ramda) and [RamdaAdjunct](https://github.com/char0n/ramda-adjunct).
 
@@ -72,7 +72,7 @@ jsonApiMerge(jsonApiData.included, jsonApiData.data);
 Result would be following data structure.
 
 ```js
-const jsonApiData = {
+{
   id: 1,
   type: 'resource',
   attributes: {
@@ -95,7 +95,7 @@ const jsonApiData = {
 The library can also process data in list format and can transform this:
 
 ```js
-const jsonApiData = {
+{
   data: [
     {
       id: 1,
@@ -128,7 +128,7 @@ const jsonApiData = {
 into this:
 
 ```js
-const jsonApiData = [
+[
   {
     id: 1,
     type: 'resource',
