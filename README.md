@@ -14,11 +14,11 @@ Peer dependencies of [Ramda](https://github.com/ramda/ramda) and [RamdaAdjunct](
 ### Installation
 
 ```sh
-npm i @char0n/json-api-merge
+npm i json-api-merge
 ```
 or
 ```sh
-yarn add @char0n/json-api-merge
+yarn add json-api-merge
 ```
 
 ### Usage
@@ -56,7 +56,7 @@ const jsonApiData = {
 
 
 ```javascript
-import jsonApiMerge from '@char0n/json-api-merge'
+import jsonApiMerge from 'json-api-merge'
 
 jsonApiMerge(jsonApiData.included, jsonApiData.data)
 ```
@@ -64,7 +64,7 @@ jsonApiMerge(jsonApiData.included, jsonApiData.data)
 #### Node
 
 ```javascript
-const jsonApiMerge = require('@char0n/json-api-merge');
+const jsonApiMerge = require('json-api-merge');
 
 jsonApiMerge(jsonApiData.included, jsonApiData.data);
 ```

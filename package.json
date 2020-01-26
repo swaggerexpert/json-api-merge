@@ -1,5 +1,5 @@
 {
-  "name": "@char0n/json-api-merge",
+  "name": "json-api-merge",
   "description": "JSON:API specific redundant duplication algorithm for merging included resources into original data.",
   "keywords": [
     "json:api",

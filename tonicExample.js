@@ -1,6 +1,6 @@
 require('ramda');
 require('ramda-adjunct');
-var jsonApiMerge = require('@char0n/json-api-merge');
+var jsonApiMerge = require('json-api-merge');
 
 var jsonApiData = {
   data: {
