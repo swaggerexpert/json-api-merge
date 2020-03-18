@@ -11,23 +11,6 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-16.04
-    container: circleci/node:10-browsers-legacy
-
-    steps:
-      - run: sudo chmod -R 777 /__w
-      - uses: actions/checkout@v2
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-      - run: npm ci
-      - run: npm run lint
-      - run: npm run test:types
-      - run: npm run coverage
-      - run: npm run test:web
-        env:
-          CI: true
-
-  build:
     runs-on: ubuntu-latest
 
     strategy:
@@ -41,6 +24,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
+      - run: npm run lint
+      - run: npm run test:types
+      - run: npm run coverage
       - run: npm run build
         env:
           CI: true
