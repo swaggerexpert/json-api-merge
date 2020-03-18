@@ -15,19 +15,19 @@ jobs:
       runs-on: ubuntu-latest
       container: circleci/node:10-browsers-legacy
 
-      steps:
-        - uses: actions/checkout@v2
-        - name: Use Node.js ${{ matrix.node-version }}
-          uses: actions/setup-node@v1
-          with:
-            node-version: ${{ matrix.node-version }}
-        - run: npm ci
-        - run: npm run lint
-        - run: npm run test:types
-        - run: npm run coverage
-        - run: npm run test:web
-          env:
-            CI: true
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run test:types
+      - run: npm run coverage
+      - run: npm run test:web
+        env:
+          CI: true
 
   build:
     runs-on: ubuntu-latest
