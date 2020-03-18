@@ -151,6 +151,187 @@ into this:
 ]
 ```
 
+### Compound document
+
+To reduce the number of HTTP requests, servers MAY allow responses that include related resources
+along with the requested primary resources. Such responses are called [“compound documents”](https://jsonapi.org/format/1.1/#document-compound-documents).
+
+```js
+const jsonApiData = {
+  data: [
+    {
+      type: 'articles',
+      id: '1',
+      attributes: {
+        title: 'JSON:API paints my bikeshed!',
+      },
+      links: {
+        self: 'http://example.com/articles/1',
+      },
+      relationships: {
+        author: {
+          links: {
+            self: 'http://example.com/articles/1/relationships/author',
+            related: 'http://example.com/articles/1/author',
+          },
+          data: { type: 'people', id: '9' },
+        },
+        comments: {
+          links: {
+            self: 'http://example.com/articles/1/relationships/comments',
+            related: 'http://example.com/articles/1/comments',
+          },
+          data: [
+            { type: 'comments', id: '5' },
+            { type: 'comments', id: '12' },
+          ],
+        },
+      },
+    },
+  ],
+  included: [
+    {
+      type: 'people',
+      id: '9',
+      attributes: {
+        firstName: 'Dan',
+        lastName: 'Gebhardt',
+        twitter: 'dgeb',
+      },
+      links: {
+        self: 'http://example.com/people/9',
+      },
+    },
+    {
+      type: 'comments',
+      id: '5',
+      attributes: {
+        body: 'First!',
+      },
+      relationships: {
+        author: {
+          data: { type: 'people', id: '2' },
+        },
+      },
+      links: {
+        self: 'http://example.com/comments/5',
+      },
+    },
+    {
+      type: 'comments',
+      id: '12',
+      attributes: {
+        body: 'I like XML better',
+      },
+      relationships: {
+        author: {
+          data: { type: 'people', id: '9' },
+        },
+      },
+      links: {
+        self: 'http://example.com/comments/12',
+      },
+    },
+  ],
+};
+```
+
+Compound documents can achieve full linkage with the following trick:
+
+```js
+const included = jsonApiMerge(jsonApiData.included, jsonApiData.included);
+jsonApiMerge(included, jsonApiData.data);
+```
+
+This operation will generate following compound document with full linkage:
+
+````js
+[
+  {
+    type: 'articles',
+    id: '1',
+    attributes: {
+      title: 'JSON:API paints my bikeshed!',
+    },
+    links: {
+      self: 'http://example.com/articles/1',
+    },
+    relationships: {
+      author: {
+        links: {
+          self: 'http://example.com/articles/1/relationships/author',
+          related: 'http://example.com/articles/1/author',
+        },
+        data: {
+          type: 'people',
+          id: '9',
+          attributes: {
+            firstName: 'Dan',
+            lastName: 'Gebhardt',
+            twitter: 'dgeb',
+          },
+          links: {
+            self: 'http://example.com/people/9',
+          },
+        },
+      },
+      comments: {
+        links: {
+          self: 'http://example.com/articles/1/relationships/comments',
+          related: 'http://example.com/articles/1/comments',
+        },
+        data: [
+          {
+            type: 'comments',
+            id: '5',
+            attributes: {
+              body: 'First!',
+            },
+            relationships: {
+              author: {
+                data: {
+                  type: 'people',
+                  id: '2',
+                },
+              },
+            },
+            links: {
+              self: 'http://example.com/comments/5',
+            },
+          },
+          {
+            type: 'comments',
+            id: '12',
+            attributes: {
+              body: 'I like XML better',
+            },
+            relationships: {
+              author: {
+                data: {
+                  type: 'people',
+                  id: '9',
+                  attributes: {
+                    firstName: 'Dan',
+                    lastName: 'Gebhardt',
+                    twitter: 'dgeb',
+                  },
+                  links: {
+                    self: 'http://example.com/people/9',
+                  },
+                },
+              },
+            },
+            links: {
+              self: 'http://example.com/comments/12',
+            },
+          },
+        ],
+      },
+    },
+  },
+];
+````
+
 ## Motivation
 
 I was looking for a simple way how to merge the `included` into `data` without compromising data
