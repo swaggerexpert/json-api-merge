@@ -25,8 +25,6 @@ yarn add json-api-merge
 
 ### Usage
 
-#### ES2O19
-
 ```js
 const jsonApiData = {
   data: {
@@ -56,6 +54,7 @@ const jsonApiData = {
 };
 ```
 
+#### ES2O19
 
 ```javascript
 import jsonApiMerge from 'json-api-merge'
