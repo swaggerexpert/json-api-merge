@@ -15,6 +15,7 @@ jobs:
     container: circleci/node:10-browsers-legacy
 
     steps:
+      - run: sudo chmod -R 777 /__w
       - uses: actions/checkout@v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
