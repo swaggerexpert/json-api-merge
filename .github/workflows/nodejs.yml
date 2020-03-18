@@ -11,9 +11,8 @@ on:
 
 jobs:
   test:
-    container-job:
-      runs-on: ubuntu-latest
-      container: circleci/node:10-browsers-legacy
+    runs-on: ubuntu-latest
+    container: circleci/node:10-browsers-legacy
 
     steps:
       - uses: actions/checkout@v2
