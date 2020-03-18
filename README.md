@@ -1,3 +1,5 @@
+[![Node CI](https://github.com/char0n/json-api-merge/workflows/Node.js%20CI/badge.svg)](https://github.com/char0n/json-api-merge/actions?query=workflow%3A%22Node.js+CI%22)
+
 # JSON API Merge
 
 `json-api-merge` is a JSON:API specific redundant duplication algorithm for merging included resources into original data.
