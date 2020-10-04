@@ -2,9 +2,9 @@ import { assert } from 'chai';
 
 import jsonApiMerge from '../src';
 
-describe('jsonApiMerge', function() {
-  context('given single resource', function() {
-    context('and has one-to-one relationship', function() {
+describe('jsonApiMerge', function () {
+  context('given single resource', function () {
+    context('and has one-to-one relationship', function () {
       const jsonApiData = {
         data: {
           id: 1,
@@ -32,7 +32,7 @@ describe('jsonApiMerge', function() {
         ],
       };
 
-      specify('should merge included', function() {
+      specify('should merge included', function () {
         const expected = {
           id: 1,
           type: 'resource',
@@ -57,7 +57,7 @@ describe('jsonApiMerge', function() {
       });
     });
 
-    context('and has one-to-many relationship', function() {
+    context('and has one-to-many relationship', function () {
       const jsonApiData = {
         data: {
           id: 1,
@@ -98,7 +98,7 @@ describe('jsonApiMerge', function() {
         ],
       };
 
-      specify('should merge included', function() {
+      specify('should merge included', function () {
         const expected = {
           id: 1,
           type: 'resource',
@@ -132,7 +132,7 @@ describe('jsonApiMerge', function() {
       });
     });
 
-    context('and non matching includes', function() {
+    context('and non matching includes', function () {
       const jsonApiData = {
         data: {
           id: 1,
@@ -162,7 +162,7 @@ describe('jsonApiMerge', function() {
 
       specify(
         'should return original resource relationship representation',
-        function() {
+        function () {
           const actual = jsonApiMerge(jsonApiData.included, jsonApiData.data);
 
           assert.deepEqual(actual, jsonApiData.data);
@@ -170,7 +170,7 @@ describe('jsonApiMerge', function() {
       );
     });
 
-    context('and non existing includes', function() {
+    context('and non existing includes', function () {
       const jsonApiData = {
         data: {
           id: 1,
@@ -189,7 +189,7 @@ describe('jsonApiMerge', function() {
         },
       };
 
-      specify('should return original resource', function() {
+      specify('should return original resource', function () {
         const actual1 = jsonApiMerge(null, jsonApiData.data);
         const actual2 = jsonApiMerge(undefined, jsonApiData.data);
 
@@ -199,8 +199,8 @@ describe('jsonApiMerge', function() {
     });
   });
 
-  context('given multiple resources', function() {
-    context('and has one-to-one relationship', function() {
+  context('given multiple resources', function () {
+    context('and has one-to-one relationship', function () {
       const jsonApiData = {
         data: [
           {
@@ -245,7 +245,7 @@ describe('jsonApiMerge', function() {
         ],
       };
 
-      specify('should merge included', function() {
+      specify('should merge included', function () {
         const expected = [
           {
             id: 1,
@@ -290,7 +290,7 @@ describe('jsonApiMerge', function() {
       });
     });
 
-    context('and has one-to-many relationship', function() {
+    context('and has one-to-many relationship', function () {
       const jsonApiData = {
         data: [
           {
@@ -361,7 +361,7 @@ describe('jsonApiMerge', function() {
         ],
       };
 
-      specify('should merge included', function() {
+      specify('should merge included', function () {
         const expected = [
           {
             id: 1,
@@ -424,7 +424,7 @@ describe('jsonApiMerge', function() {
       });
     });
 
-    context('and non matching includes', function() {
+    context('and non matching includes', function () {
       const jsonApiData = {
         data: [
           {
@@ -471,7 +471,7 @@ describe('jsonApiMerge', function() {
 
       specify(
         'should return original resource relationship representation',
-        function() {
+        function () {
           const expecte = [
             {
               id: 1,
@@ -514,7 +514,7 @@ describe('jsonApiMerge', function() {
       );
     });
 
-    context('and non existing includes', function() {
+    context('and non existing includes', function () {
       const jsonApiData = {
         data: [
           {
@@ -550,7 +550,7 @@ describe('jsonApiMerge', function() {
         ],
       };
 
-      specify('should return original resource', function() {
+      specify('should return original resource', function () {
         const actual1 = jsonApiMerge(null, jsonApiData.data);
         const actual2 = jsonApiMerge(undefined, jsonApiData.data);
 
@@ -560,7 +560,7 @@ describe('jsonApiMerge', function() {
     });
   });
 
-  context('given compound document', function() {
+  context('given compound document', function () {
     const jsonApiData = {
       data: [
         {
@@ -639,7 +639,7 @@ describe('jsonApiMerge', function() {
       ],
     };
 
-    context('should create full linkage', function() {
+    context('should create full linkage', function () {
       const expected = [
         {
           type: 'articles',
@@ -732,7 +732,7 @@ describe('jsonApiMerge', function() {
     });
   });
 
-  it('should curry', function() {
+  it('should curry', function () {
     const jsonApiData = {
       data: {
         id: 1,

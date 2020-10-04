@@ -52,7 +52,7 @@ const relToPaths = (relationship, resources) =>
   );
 
 // getRelPaths :: Resource -> [RelPath]
-const getRelPaths = resource => {
+const getRelPaths = (resource) => {
   const relationships = getRelationships(resource);
 
   return reduce(
