@@ -125,7 +125,7 @@
     "testem": "3.0.2",
     "tslint": "=5.20.1",
     "typescript": "=3.7.4",
-    "webpack": "4.41.5",
+    "webpack": "4.44.2",
     "webpack-cli": "3.3.10"
   },
   "browserslist": "> 0.25%, ie 10, ie 11, not op_mini all",
