@@ -29,7 +29,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MERGE_METHOD: SQUASH
           PRESET: DEPENDABOT_MINOR
-          MAXIMUM_RETRIES: 2
 
   test:
     runs-on: ubuntu-latest
