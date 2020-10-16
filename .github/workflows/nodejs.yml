@@ -10,12 +10,33 @@ on:
     branches: [ master ]
 
 jobs:
+  merge-me:
+    name: Merge me!
+
+    runs-on: ubuntu-latest
+
+    needs: [test]
+
+    strategy:
+      matrix:
+        node-version: [ 14.x ]
+
+    steps:
+      - name: Merge me!
+        uses: ridedott/merge-me-action@master
+        with:
+          GITHUB_LOGIN: dependabot
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MERGE_METHOD: SQUASH
+          PRESET: DEPENDABOT_MINOR
+          MAXIMUM_RETRIES: 2
+
   test:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 13.x]
+        node-version: [10.x, 12.x, 14.x]
 
     steps:
       - uses: actions/checkout@v2
