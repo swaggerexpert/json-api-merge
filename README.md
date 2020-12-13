@@ -6,13 +6,6 @@
 
 ## Getting Started
 
-### Requirements
-
-Peer dependencies of [Ramda](https://github.com/ramda/ramda) and [RamdaAdjunct](https://github.com/char0n/ramda-adjunct).
-
- - ramda >= 0.19.0 <= 0.26.1
- - ramda-adjunct >=0.3.0
-
 ### Installation
 
 ```sh
