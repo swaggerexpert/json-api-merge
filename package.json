@@ -8,7 +8,7 @@
     "redundant",
     "duplication"
   ],
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/char0n/json-api-merge",
   "license": "BSD-3-Clause",
   "repository": {
@@ -80,7 +80,7 @@
     "clean": "rimraf .nyc_output .tmp coverage tmp-test-bundle.js dist lib es json-api-merge-0.1.0.tgz test-results.xml"
   },
   "readme": "README.md",
-  "peerDependencies": {
+  "dependencies": {
     "ramda": ">= 0.19.0",
     "ramda-adjunct": ">=0.3.0"
   },
