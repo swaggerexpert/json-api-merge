@@ -1,5 +1,13 @@
 {
   "test_page": "./test/mocha-testem.mustache",
   "before_tests": "npm run test:bundle-create",
-  "after_tests": "npm run test:bundle-clean"
+  "after_tests": "npm run test:bundle-clean",
+  "launch_in_ci": [
+    "Firefox"
+  ],
+  "browser_args": {
+    "Firefox": [
+      "--headless"
+    ]
+  }
 }
