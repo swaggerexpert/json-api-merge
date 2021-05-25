@@ -7,15 +7,19 @@
 /npm-debug.log
 /test
 /.huskyrc
+/.husky
 /.lintstagedrc
 /.babelrc
 /.editorconfig
 /.eslintignore
 /.gitattributes
 /.gitignore
+/.mocharc.js
 /.npmignore
 /.npmrc
 /.nycrc
+/.releaserc
+/tmp-test-bundle.js.LICENSE.txt
 /.codeclimate.yml
 /.commitlintrc.json
 /.prettierignore
@@ -34,5 +38,6 @@
 /GOVERNANCE.md
 /SECURITY.md
 /json-api-merge-*.*.*.tgz
+
 .eslintrc
 
