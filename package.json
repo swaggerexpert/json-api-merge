@@ -120,7 +120,7 @@
     "ramda": "=0.27.1",
     "ramda-adjunct": "=2.33.0",
     "rimraf": "3.0.2",
-    "sinon": "11.0.0",
+    "sinon": "11.1.0",
     "terser-webpack-plugin": "5.1.2",
     "testem": "3.4.1",
     "tslint": "=6.1.3",
