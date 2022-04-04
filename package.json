@@ -116,7 +116,7 @@
     "mocha-junit-reporter": "2.0.2",
     "mocha-multi-reporters": "1.5.1",
     "nyc": "15.1.0",
-    "prettier": "=2.6.1",
+    "prettier": "=2.6.2",
     "ramda": "=0.27.2",
     "ramda-adjunct": "=2.36.0",
     "rimraf": "3.0.2",
