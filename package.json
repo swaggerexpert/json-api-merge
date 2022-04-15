@@ -111,7 +111,7 @@
     "husky": "7.0.4",
     "istanbul": "=0.4.5",
     "license-cli": "1.1.6",
-    "lint-staged": "12.3.7",
+    "lint-staged": "12.3.8",
     "mocha": "=9.2.2",
     "mocha-junit-reporter": "2.0.2",
     "mocha-multi-reporters": "1.5.1",
