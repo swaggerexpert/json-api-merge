@@ -108,7 +108,7 @@
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-ramda": "2.5.1",
     "glob": "8.0.3",
-    "husky": "8.0.1",
+    "husky": "8.0.2",
     "istanbul": "=0.4.5",
     "license-cli": "1.1.6",
     "lint-staged": "13.0.3",
