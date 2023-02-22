@@ -766,7 +766,7 @@ describe('jsonApiMerge', function () {
       const included = jsonApiMerge(jsonApiData.included, jsonApiData.included);
       const thunk = () => jsonApiMerge(included, jsonApiData.data);
 
-      assert.throws(thunk, "Cannot read property 'type' of undefined");
+      assert.throws(thunk, TypeError, /^Cannot read propert/);
     });
   });
 
