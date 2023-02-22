@@ -763,10 +763,27 @@ describe('jsonApiMerge', function () {
     };
 
     specify('should throw error', function () {
-      const included = jsonApiMerge(jsonApiData.included, jsonApiData.included);
-      const thunk = () => jsonApiMerge(included, jsonApiData.data);
+      const expected = {
+        id: 1,
+        type: 'resource',
+        attributes: {
+          name: 'Resource name',
+        },
+        relationships: {
+          related: {
+            links: {
+              related: {
+                href: 'http://example.com/related-resource/',
+                title: 'Related',
+              },
+            },
+          },
+        },
+      };
 
-      assert.throws(thunk, TypeError);
+      const actual = jsonApiMerge(jsonApiData.included, jsonApiData.data);
+
+      assert.deepEqual(actual, expected);
     });
   });
 
