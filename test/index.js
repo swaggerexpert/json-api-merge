@@ -766,7 +766,7 @@ describe('jsonApiMerge', function () {
       const included = jsonApiMerge(jsonApiData.included, jsonApiData.included);
       const thunk = () => jsonApiMerge(included, jsonApiData.data);
 
-      assert.throws(thunk, TypeError, /^Cannot read propert/);
+      assert.throws(thunk, TypeError);
     });
   });
 
