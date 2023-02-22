@@ -21,7 +21,7 @@
   "author": {
     "name": "Vladimir Gorej",
     "email": "vladimir.gorej@gmail.com",
-    "url": "https://www.linkedin.com/in/vladimirgorej/"
+    "url": "https://vladimirgorej.com/"
   },
   "sideEffects": false,
   "main": "./dist/node.js",
