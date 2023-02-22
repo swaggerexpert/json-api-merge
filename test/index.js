@@ -639,7 +639,7 @@ describe('jsonApiMerge', function () {
       ],
     };
 
-    context('should create full linkage', function () {
+    specify('should create full linkage', function () {
       const expected = [
         {
           type: 'articles',
@@ -729,6 +729,44 @@ describe('jsonApiMerge', function () {
       const actual = jsonApiMerge(included, jsonApiData.data);
 
       assert.deepEqual(actual, expected);
+    });
+  });
+
+  context("given relationships doesn't have data property", function () {
+    const jsonApiData = {
+      data: {
+        id: 1,
+        type: 'resource',
+        attributes: {
+          name: 'Resource name',
+        },
+        relationships: {
+          related: {
+            links: {
+              related: {
+                href: 'http://example.com/related-resource/',
+                title: 'Related',
+              },
+            },
+          },
+        },
+      },
+      included: [
+        {
+          id: 2,
+          type: 'related_resource',
+          attributes: {
+            name: 'Related resource name',
+          },
+        },
+      ],
+    };
+
+    specify('should throw error', function () {
+      const included = jsonApiMerge(jsonApiData.included, jsonApiData.included);
+      const thunk = () => jsonApiMerge(included, jsonApiData.data);
+
+      assert.throws(thunk, TypeError);
     });
   });
 
