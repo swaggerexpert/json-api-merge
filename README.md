@@ -376,4 +376,4 @@ Although json-api-merge is written in ES2019, we also support **Typescript**. Wh
 
  vladimir.gorej@gmail.com
 
- https://www.linkedin.com/in/vladimirgorej/
+https://vladimirgorej.com/
