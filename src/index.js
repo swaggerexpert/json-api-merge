@@ -11,7 +11,7 @@ import {
   concat,
   insert,
   assocPath,
-  pickBy
+  pickBy,
 } from 'ramda';
 import { mapIndexed, reduceIndexed, ensureArray, isArray } from 'ramda-adjunct';
 
