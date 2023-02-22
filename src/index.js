@@ -25,7 +25,11 @@ import { mapIndexed, reduceIndexed, ensureArray, isArray } from 'ramda-adjunct';
 //     RelPath = {path: String, key: ResourceKey}
 
 // getRelationships :: Resource -> Relationships
-const getRelationships = pipe(propOr({}, ['relationships']), pickBy(has('data')), keys);
+const getRelationships = pipe(
+  propOr({}, ['relationships']),
+  pickBy(has('data')),
+  keys
+);
 
 // resourceKey :: ResourceRel -> ResourceKey
 const resourceKey = ({ type, id }) => `${type}-${id}`;
