@@ -107,7 +107,7 @@
     "eslint-plugin-mocha": "10.1.0",
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-ramda": "2.5.1",
-    "glob": "8.1.0",
+    "glob": "=9.3.4",
     "husky": "8.0.3",
     "istanbul": "=0.4.5",
     "license-cli": "1.1.6",
