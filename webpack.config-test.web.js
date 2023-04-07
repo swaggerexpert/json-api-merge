@@ -8,7 +8,7 @@ module.exports = {
   target: 'web',
   entry: [
     '@babel/polyfill',
-    ...globSync('./test/*.js', {
+    ...globSync(path.join(__dirname, './test/*.js'), {
       ignore: ['./test/mocha-bootstrap.js'],
     }),
   ],
