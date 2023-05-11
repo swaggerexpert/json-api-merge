@@ -12,6 +12,7 @@ import {
   insert,
   assocPath,
   pickBy,
+  propSatisfies,
 } from 'ramda';
 import { mapIndexed, reduceIndexed, ensureArray, isArray } from 'ramda-adjunct';
 
@@ -28,6 +29,7 @@ import { mapIndexed, reduceIndexed, ensureArray, isArray } from 'ramda-adjunct';
 const getRelationships = pipe(
   propOr({}, ['relationships']),
   pickBy(has('data')),
+  pickBy(propSatisfies(x => x !== null, 'data')),
   keys
 );
 
