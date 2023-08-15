@@ -787,6 +787,48 @@ describe('jsonApiMerge', function () {
     });
   });
 
+  context(
+    'given relationships have data property containing null',
+    function () {
+      const jsonApiData = {
+        data: {
+          id: 1,
+          type: 'resource',
+          attributes: {
+            name: 'Resource name',
+          },
+          relationships: {
+            related: {
+              links: {
+                related: {
+                  href: 'http://example.com/related-resource/',
+                  title: 'Related',
+                },
+              },
+              data: null,
+            },
+          },
+        },
+        included: [
+          {
+            id: 2,
+            type: 'related_resource',
+            attributes: {
+              name: 'Related resource name',
+            },
+          },
+        ],
+      };
+
+      specify('should do nothing', function () {
+        const actual = jsonApiMerge(jsonApiData.included, jsonApiData.data);
+        const expected = actual;
+
+        assert.deepEqual(actual, expected);
+      });
+    }
+  );
+
   it('should curry', function () {
     const jsonApiData = {
       data: {
