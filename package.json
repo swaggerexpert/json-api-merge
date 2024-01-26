@@ -85,7 +85,7 @@
     "ramda-adjunct": ">=0.3.0"
   },
   "devDependencies": {
-    "@babel/cli": "7.23.4",
+    "@babel/cli": "7.23.9",
     "@babel/core": "7.23.9",
     "@babel/plugin-transform-modules-commonjs": "7.23.3",
     "@babel/polyfill": "7.12.1",
