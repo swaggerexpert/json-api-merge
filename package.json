@@ -119,7 +119,7 @@
     "prettier": "=3.2.5",
     "ramda": "=0.30.0",
     "ramda-adjunct": "=4.1.1",
-    "rimraf": "5.0.5",
+    "rimraf": "5.0.7",
     "sinon": "17.0.2",
     "terser-webpack-plugin": "5.3.10",
     "testem": "3.13.0",
