@@ -1,4 +1,4 @@
-# Contributing to json-api-merge
+# Contributing to @swaggerexpert/json-api-merge
 
 As a contributor, here are the guidelines we would like you to follow:
 
@@ -91,7 +91,7 @@ To ensure consistency throughout the source code, keep these rules in mind as yo
 
 We have very precise rules over how our git commit messages can be formatted.  This leads to **more
 readable messages** that are easy to follow when looking through the **project history**.  But also,
-we use the git commit messages to **generate the json-api-merge change log**.
+we use the git commit messages to **generate the @swaggerexpert/json-api-merge change log**.
 
 ### Commit Message Format
 Each commit message consists of a **header**, a **body** and a **footer**.  The header has a special
@@ -184,4 +184,4 @@ A detailed explanation can be found in this [document][commit-message-format].
 
 ### Contributors
 
-Thank you to all the people who have already contributed to json-api-merge!
+Thank you to all the people who have already contributed to @swaggerexpert/json-api-merge!

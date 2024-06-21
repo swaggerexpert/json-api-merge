@@ -2,18 +2,18 @@
 
 # JSON API Merge
 
-`json-api-merge` is a JSON:API specific redundant duplication algorithm for merging included resources into original data.
+`@swaggerexpert/json-api-merge` is a JSON:API specific redundant duplication algorithm for merging included resources into original data.
 
 ## Getting Started
 
 ### Installation
 
 ```sh
-npm i json-api-merge
+npm i @swaggerexpert/json-api-merge
 ```
 or
 ```sh
-yarn add json-api-merge
+yarn add @swaggerexpert/json-api-merge
 ```
 
 ### Usage
@@ -47,18 +47,18 @@ const jsonApiData = {
 };
 ```
 
-#### ES2O19
+#### ES modules
 
 ```javascript
-import jsonApiMerge from 'json-api-merge'
+import jsonApiMerge from '@swaggerexpert/json-api-merge'
 
 jsonApiMerge(jsonApiData.included, jsonApiData.data)
 ```
 
-#### Node
+#### CommonJS
 
 ```javascript
-const jsonApiMerge = require('json-api-merge');
+const jsonApiMerge = require('@swaggerexpert/json-api-merge');
 
 jsonApiMerge(jsonApiData.included, jsonApiData.data);
 ```
@@ -328,7 +328,7 @@ This operation will generate following compound document with full linkage:
 ## Motivation
 
 I was looking for a simple way how to merge the `included` into `data` without compromising data
-structures. All other libraries that I tested were opionated about how the resulting merge should look like.
+structures. All other libraries that I tested were opinionated about how the resulting merge should look like.
 This library has no opinion and simply merged the `included` into `data`. It does nothing else.
 
 ## Contributing
@@ -353,11 +353,6 @@ If you want to contribute to this project, please consult the [CONTRIBUTING.md](
 ```
 
 
-**Running code coverage numbers**
-```sh
- $ npm run coverage
-```
-
 **Running linter**
 
 We're using [eslint](https://eslint.org/) and [airbnb codestyle](https://github.com/airbnb/javascript) rules with [prettier](https://prettier.io/) integrated as an eslint plugin.
@@ -368,12 +363,11 @@ We're using [eslint](https://eslint.org/) and [airbnb codestyle](https://github.
 
 ## Typescript support
 
-Although json-api-merge is written in ES2019, we also support **Typescript**. When json-api-merge gets imported into a Typescript project, typings are automatically imported and used.
+Although @swaggerexpert/json-api-merge is written in ES2019, we also support **Typescript**.
+When @swaggerexpert/json-api-merge gets imported into a Typescript project, typings are automatically imported and used.
 
 ## Author
 
- char0n (Vladimir Gorej)
-
- vladimir.gorej@gmail.com
-
-https://vladimirgorej.com/
+char0n (Vladimír Gorej)
+contact@swaggerexpert.com
+https://swaggerexport.com/
