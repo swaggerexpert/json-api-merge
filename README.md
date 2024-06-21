@@ -1,8 +1,28 @@
+[![npmversion](https://badge.fury.io/js/@swaggerexpert%2Fjson-api-merge.svg)](https://www.npmjs.com/package/@swaggerexpert/json-api-merge)
+[![npm](https://img.shields.io/npm/dm/@swaggerexpert/json-api-merge)](https://www.npmjs.com/package/@swaggerexpert/json-api-merge)
 [![Node CI](https://github.com/swaggerexpert/json-api-merge/workflows/Node.js%20CI/badge.svg)](https://github.com/swaggerexpert/json-api-merge/actions?query=workflow%3A%22Node.js+CI%22)
+[![Dependabot enabled](https://img.shields.io/badge/Dependabot-enabled-blue.svg)](https://dependabot.com/)
+[![try on RunKit](https://img.shields.io/badge/try%20on-RunKit-brightgreen.svg?style=flat)](https://npm.runkit.com/@swaggerexpert/json-api-merge)
+[![Tidelift](https://tidelift.com/badges/package/npm/swaggerexpert-json-api-merge)](https://tidelift.com/subscription/pkg/npm-swaggerexpert-json-api-merge?utm_source=npm-swaggerexpert-json-api-merge&utm_medium=referral&utm_campaign=readme)
+
 
 # JSON API Merge
 
 `@swaggerexpert/json-api-merge` is a JSON:API specific redundant duplication algorithm for merging included resources into original data.
+
+
+<table>
+  <tr>
+    <td align="right" valign="middle">
+        <img src="https://cdn2.hubspot.net/hubfs/4008838/website/logos/logos_for_download/Tidelift_primary-shorthand-logo.png" alt="Tidelift" width="60" />
+      </td>
+      <td valign="middle">
+        <a href="https://tidelift.com/subscription/pkg/npm-swaggerexpert-json-api-merge?utm_source=npm-swaggerexpert-json-api-merge&utm_medium=referral&utm_campaign=readme">
+            Get professionally supported @swaggerexpert/json-api-merge with Tidelift Subscription.
+        </a>
+      </td>
+  </tr>
+</table>
 
 ## Getting Started
 
@@ -368,6 +388,6 @@ When @swaggerexpert/json-api-merge gets imported into a Typescript project, typi
 
 ## Author
 
-char0n (Vladimír Gorej)
-contact@swaggerexpert.com
+char0n (Vladimír Gorej) \
+contact@swaggerexpert.com \
 https://swaggerexport.com/
