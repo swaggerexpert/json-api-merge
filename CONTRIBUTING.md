@@ -112,7 +112,7 @@ to read on GitHub as well as in various git tools.
 
 Footer should contain a [closing reference to an issue](https://help.github.com/articles/closing-issues-via-commit-messages/) if any.
 
-Samples: (even more [samples](https://github.com/char0n/json-api-merge/commits/master))
+Samples: (even more [samples](https://github.com/swaggerexpert/json-api-merge/commits/master))
 
 ```
 docs(changelog): update change log to beta.5
