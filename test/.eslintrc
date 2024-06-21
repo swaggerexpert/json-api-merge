@@ -28,7 +28,14 @@
     "mocha/no-top-level-hooks": 2,
     "mocha/no-identical-title": 2,
     "mocha/no-nested-tests": 2,
-    "mocha/no-exclusive-tests": 2
+    "mocha/no-exclusive-tests": 2,
+    "import/extensions": [
+      "error",
+      "always",
+      {
+        "ignorePackages": true,
+      }
+    ]
   },
   "overrides": [{
     "files": ["mocha-bootstrap.js"],

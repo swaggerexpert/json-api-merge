@@ -10,15 +10,7 @@
       "options": { "parser": "json" }
     },
     {
-      "files": ".babelrc",
-      "options": { "parser": "json" }
-    },
-    {
       "files": ".eslintrc",
-      "options": { "parser": "json" }
-    },
-    {
-      "files": ".nycrc",
       "options": { "parser": "json" }
     }
   ]
