@@ -1,4 +1,4 @@
-[![Node CI](https://github.com/char0n/json-api-merge/workflows/Node.js%20CI/badge.svg)](https://github.com/char0n/json-api-merge/actions?query=workflow%3A%22Node.js+CI%22)
+[![Node CI](https://github.com/swaggerexpert/json-api-merge/workflows/Node.js%20CI/badge.svg)](https://github.com/swaggerexpert/json-api-merge/actions?query=workflow%3A%22Node.js+CI%22)
 
 # JSON API Merge
 
@@ -333,12 +333,12 @@ This library has no opinion and simply merged the `included` into `data`. It doe
 
 ## Contributing
 
-If you want to contribute to this project, please consult the [CONTRIBUTING.md](https://github.com/char0n/ramda-adjunct/blob/master/CONTRIBUTING.md) guidelines.
+If you want to contribute to this project, please consult the [CONTRIBUTING.md](https://github.com/swaggerexpert/ramda-adjunct/blob/master/CONTRIBUTING.md) guidelines.
 
 **Obtaining project copy**
 
 ```sh
- $ git clone https://github.com/char0n/json-api-merge
+ $ git clone https://github.com/swaggerexpert/json-api-merge
  $ npm i
 ```
 
