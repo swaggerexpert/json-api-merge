@@ -55,7 +55,7 @@
     "lint": "eslint ./ && tslint --project types/tsconfig.json -c types/tslint.json types/**/*.ts",
     "lint:fix": "eslint ./ --fix && tslint --fix --project types/tsconfig.json -c types/tslint.json types/**/*.ts",
     "test:web": "testem ci",
-    "test:bundle-create": "webpack --config webpack.config-test.web.js --progress",
+    "test:bundle-create": "webpack --config webpack.config-test.web.cjs --progress",
     "test:bundle-clean": "rimraf tmp-test-bundle.js",
     "build": "npm run build:es && npm run build:commonjs && npm run build:umd",
     "build:es": {
