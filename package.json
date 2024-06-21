@@ -12,7 +12,7 @@
     "duplication"
   ],
   "type": "module",
-  "version": "1.1.5",
+  "version": "2.0.0",
   "homepage": "https://github.com/swaggerexpert/json-api-merge",
   "license": "BSD-3-Clause",
   "repository": {
