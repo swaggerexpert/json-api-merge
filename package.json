@@ -1,5 +1,8 @@
 {
   "name": "@swaggerexpert/json-api-merge",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "JSON:API specific redundant duplication algorithm for merging included resources into original data.",
   "keywords": [
     "json:api",
