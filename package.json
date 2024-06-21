@@ -32,7 +32,7 @@
     ".": {
       "types": "./types/index.d.ts",
       "import": "./es/index.mjs",
-      "require": "./cjs/index.cjs"
+      "require": "./lib/index.cjs"
     },
     "./package.json": "./package.json"
   },
