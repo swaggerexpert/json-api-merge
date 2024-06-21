@@ -4,13 +4,13 @@ on:
     branches:
       - master
 
-  workflow_run:
-    workflows:
-      - "Node.js CI"
-    branches:
-      - master
-    types:
-      - completed
+#  workflow_run:
+#    workflows:
+#      - "Node.js CI"
+#    branches:
+#      - master
+#    types:
+#      - completed
 jobs:
   release:
     name: Release
@@ -31,7 +31,7 @@ jobs:
         id: semantic
         uses: cycjimmy/semantic-release-action@v4
         with:
-          dry_run: false
+          dry_run: true
           extra_plugins: |
             @semantic-release/git
         env:
