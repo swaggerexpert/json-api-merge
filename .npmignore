@@ -1,6 +1,5 @@
 /.idea
 /.tmp
-/.nyc_output
 /.github
 /coverage
 /node_modules
@@ -16,7 +15,6 @@
 /.mocharc.js
 /.npmignore
 /.npmrc
-/.nycrc
 /.releaserc
 /tmp-test-bundle.js.LICENSE.txt
 /.codeclimate.yml

@@ -8,6 +8,7 @@
     "redundant",
     "duplication"
   ],
+  "type": "module",
   "version": "1.1.5",
   "homepage": "https://github.com/swaggerexpert/json-api-merge",
   "license": "BSD-3-Clause",
@@ -24,20 +25,25 @@
     "url": "https://swaggerexpert.com/"
   },
   "sideEffects": false,
-  "main": "./lib/index.js",
-  "module": "./es/index.js",
-  "jsnext:main": "./es/index.js",
+  "main": "./lib/index.cjs",
   "unpkg": "dist/web.standalone.min.js",
   "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./es/index.mjs",
+      "require": "./cjs/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "lint": "better-npm-run lint",
     "lint:fix": "better-npm-run lint:fix",
-    "test": "better-npm-run test",
+    "test": "mocha",
     "test:web": "better-npm-run test:web",
     "test:types": "dtslint ./types",
     "test:bundle-create": "better-npm-run test:bundle-create",
     "test:bundle-clean": "better-npm-run test:bundle-clean",
-    "coverage": "better-npm-run coverage",
     "build": "better-npm-run build",
     "build:es": "better-npm-run build:es",
     "build:commonjs": "better-npm-run build:commonjs",
@@ -48,42 +54,30 @@
   "betterScripts": {
     "lint": "eslint ./ && tslint --project types/tsconfig.json -c types/tslint.json types/**/*.ts",
     "lint:fix": "eslint ./ --fix && tslint --fix --project types/tsconfig.json -c types/tslint.json types/**/*.ts",
-    "test": {
-      "command": "mocha",
-      "env": {
-        "BABEL_ENV": "commonjs"
-      }
-    },
     "test:web": "testem ci",
     "test:bundle-create": "webpack --config webpack.config-test.web.js --progress",
     "test:bundle-clean": "rimraf tmp-test-bundle.js",
-    "coverage": {
-      "command": "nyc mocha",
-      "env": {
-        "BABEL_ENV": "coverage"
-      }
-    },
     "build": "npm run build:es && npm run build:commonjs && npm run build:umd",
     "build:es": {
-      "command": "babel src --out-dir es",
+      "command": "babel src/index.js --out-file es/index.mjs",
       "env": {
         "BABEL_ENV": "es"
       }
     },
     "build:commonjs": {
-      "command": "babel src --out-dir lib",
+      "command": "babel src/index.js --out-file lib/index.cjs",
       "env": {
         "BABEL_ENV": "commonjs"
       }
     },
     "build:umd": {
-      "command": "webpack --config webpack.config.js --progress",
+      "command": "webpack --config webpack.config.cjs --progress",
       "env": {
         "BABEL_ENV": "browser"
       }
     },
     "prepublishOnly": "npm run clean && npm run lint && npm run test && npm run test:web && npm run build",
-    "clean": "rimraf .nyc_output .tmp coverage tmp-test-bundle.js dist lib es json-api-merge-0.1.0.tgz test-results.xml"
+    "clean": "rimraf .tmp tmp-test-bundle.js dist lib es test-results.xml"
   },
   "readme": "README.md",
   "dependencies": {

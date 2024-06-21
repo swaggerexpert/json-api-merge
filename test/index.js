@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 
-import jsonApiMerge from '../src';
+import jsonApiMerge from '../src/index.js';
 
 describe('jsonApiMerge', function () {
   context('given single resource', function () {
