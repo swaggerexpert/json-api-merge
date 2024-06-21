@@ -9,7 +9,6 @@
 /.huskyrc
 /.husky
 /.lintstagedrc
-/.babelrc
 /.editorconfig
 /.eslintignore
 /.gitattributes
@@ -24,6 +23,7 @@
 /.commitlintrc.json
 /.prettierignore
 /.prettierrc
+/src
 /tmp-test-bundle.js
 /testem.json
 /webpack.config.js
@@ -36,7 +36,10 @@
 /CODE_OF_CONDUCT.md
 /CONTRIBUTING.md
 /GOVERNANCE.md
-/SECURITY.md
+/babel.config.js
+/.nvmrc
+/.browserlistrc
+
 /swaggerexpert-json-api-merge-*.*.*.tgz
 
 .eslintrc

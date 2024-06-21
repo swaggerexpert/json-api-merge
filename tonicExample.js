@@ -1,4 +1,4 @@
-var jsonApiMerge = require('json-api-merge');
+var jsonApiMerge = require('@swaggerexpert/json-api-merge');
 
 var jsonApiData = {
   data: {

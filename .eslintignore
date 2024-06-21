@@ -1,6 +1,4 @@
 /.tmp
-/.nyc_output
-/coverage
 /dist
 /es
 /lib

@@ -1,7 +1,7 @@
 'use strict';
 
+const path = require('node:path');
 const { globSync } = require('glob'); // eslint-disable-line import/no-extraneous-dependencies
-const path = require('path');
 
 module.exports = {
   mode: 'production',

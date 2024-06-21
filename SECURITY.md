@@ -14,7 +14,7 @@ Thank you for improving the security of `json-api-merge`. We appreciate your eff
 responsible disclosure and will make every effort to acknowledge your
 contributions.
 
-Report security bugs by emailing the lead maintainer at **vladimir.gorej@gmail.com**.
+Report security bugs by emailing the lead maintainer at **contact@swaggerexpert.com**.
 
 The lead maintainer will acknowledge your email within 48 hours, and will send a
 more detailed response within 48 hours indicating the next steps in handling

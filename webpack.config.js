@@ -34,103 +34,7 @@ const minimizeTrait = {
   },
 };
 
-const ra = {
-  mode: 'production',
-  entry: './src/index.js',
-  target: 'node',
-  output: {
-    path: path.resolve('./dist'),
-    filename: 'node.js',
-    libraryTarget: 'umd',
-    libraryExport: 'default',
-    library: 'JsonApiMerge',
-  },
-  externals: {
-    ramda: 'ramda',
-    'ramda-adjunct': 'ramda-adjunct',
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(js)$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        options: {
-          presets: [
-            [
-              '@babel/preset-env',
-              {
-                targets: {
-                  node: '4',
-                },
-                forceAllTransforms: true,
-              },
-            ],
-          ],
-          plugins: [
-            [
-              '@babel/plugin-transform-modules-commonjs',
-              {
-                loose: true,
-              },
-            ],
-          ],
-        },
-      },
-    ],
-  },
-  ...nonMinimizeTrait,
-};
-
-const raMin = {
-  mode: 'production',
-  entry: './src/index.js',
-  target: 'node',
-  output: {
-    path: path.resolve('./dist'),
-    filename: 'node.min.js',
-    libraryTarget: 'umd',
-    libraryExport: 'default',
-    library: 'JsonApiMerge',
-  },
-  externals: {
-    ramda: 'ramda',
-    'ramda-adjunct': 'ramda-adjunct',
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(js)$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        options: {
-          presets: [
-            [
-              '@babel/preset-env',
-              {
-                targets: {
-                  node: '4',
-                },
-                forceAllTransforms: true,
-              },
-            ],
-          ],
-          plugins: [
-            [
-              '@babel/plugin-transform-modules-commonjs',
-              {
-                loose: true,
-              },
-            ],
-          ],
-        },
-      },
-    ],
-  },
-  ...minimizeTrait,
-};
-
-const raWeb = {
+const web = {
   mode: 'production',
   entry: './src/index.js',
   target: 'web',
@@ -151,31 +55,13 @@ const raWeb = {
         test: /\.(js)$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        options: {
-          presets: [
-            [
-              '@babel/preset-env',
-              {
-                forceAllTransforms: true,
-              },
-            ],
-          ],
-          plugins: [
-            [
-              '@babel/plugin-transform-modules-commonjs',
-              {
-                loose: true,
-              },
-            ],
-          ],
-        },
       },
     ],
   },
   ...nonMinimizeTrait,
 };
 
-const raWebMin = {
+const webMin = {
   mode: 'production',
   entry: './src/index.js',
   target: 'web',
@@ -196,31 +82,13 @@ const raWebMin = {
         test: /\.(js)$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        options: {
-          presets: [
-            [
-              '@babel/preset-env',
-              {
-                forceAllTransforms: true,
-              },
-            ],
-          ],
-          plugins: [
-            [
-              '@babel/plugin-transform-modules-commonjs',
-              {
-                loose: true,
-              },
-            ],
-          ],
-        },
       },
     ],
   },
   ...minimizeTrait,
 };
 
-const raWebStandalone = {
+const webStandalone = {
   mode: 'production',
   entry: './src/index.js',
   target: 'web',
@@ -231,37 +99,23 @@ const raWebStandalone = {
     libraryExport: 'default',
     library: 'JsonApiMerge',
   },
+  performance: {
+    maxAssetSize: 780000,
+    maxEntrypointSize: 780000,
+  },
   module: {
     rules: [
       {
         test: /\.(js)$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        options: {
-          presets: [
-            [
-              '@babel/preset-env',
-              {
-                forceAllTransforms: true,
-              },
-            ],
-          ],
-          plugins: [
-            [
-              '@babel/plugin-transform-modules-commonjs',
-              {
-                loose: true,
-              },
-            ],
-          ],
-        },
       },
     ],
   },
   ...nonMinimizeTrait,
 };
 
-const rawWebStandaloneMin = {
+const webStandaloneMin = {
   mode: 'production',
   entry: './src/index.js',
   target: 'web',
@@ -278,35 +132,10 @@ const rawWebStandaloneMin = {
         test: /\.(js)$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        options: {
-          presets: [
-            [
-              '@babel/preset-env',
-              {
-                forceAllTransforms: true,
-              },
-            ],
-          ],
-          plugins: [
-            [
-              '@babel/plugin-transform-modules-commonjs',
-              {
-                loose: true,
-              },
-            ],
-          ],
-        },
       },
     ],
   },
   ...minimizeTrait,
 };
 
-module.exports = [
-  ra,
-  raMin,
-  raWeb,
-  raWebMin,
-  raWebStandalone,
-  rawWebStandaloneMin,
-];
+module.exports = [web, webMin, webStandalone, webStandaloneMin];
