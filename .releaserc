@@ -1,6 +1,8 @@
 {
   "release": {
-    "branches": ["master"],
+    "branches": [
+      {"name": "master"}
+    ],
     "tagFormat": "v${version}"
   },
   "plugins": [
@@ -13,7 +15,7 @@
         "package.json",
         "package-lock.json"
       ],
-      "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      "message": "chore(release): cut the ${nextRelease.version} release [skip ci]\n\n${nextRelease.notes}"
     }]
   ]
 }
