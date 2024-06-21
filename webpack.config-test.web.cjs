@@ -7,10 +7,7 @@ module.exports = {
   mode: 'production',
   target: 'web',
   entry: [
-    '@babel/polyfill',
-    ...globSync(path.join(__dirname, './test/*.js'), {
-      ignore: ['./test/mocha-bootstrap.js'],
-    }),
+    ...globSync(path.join(__dirname, './test/*.js'), {}),
   ],
   output: {
     path: path.resolve('.'),
@@ -21,24 +18,6 @@ module.exports = {
       {
         test: /\.(js)$/,
         loader: 'babel-loader',
-        options: {
-          presets: [
-            [
-              '@babel/preset-env',
-              {
-                forceAllTransforms: true,
-              },
-            ],
-          ],
-          plugins: [
-            [
-              '@babel/plugin-transform-modules-commonjs',
-              {
-                loose: true,
-              },
-            ],
-          ],
-        },
       },
     ],
   },
