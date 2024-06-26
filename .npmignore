@@ -12,7 +12,7 @@
 /.eslintignore
 /.gitattributes
 /.gitignore
-/.mocharc.js
+/.mocharc.json
 /.npmignore
 /.npmrc
 /.releaserc
@@ -24,9 +24,8 @@
 /src
 /tmp-test-bundle.js
 /testem.json
-/webpack.config.js
-/webpack.config-test.web.js
-/webpack.config-test.node.js
+/webpack.config.cjs
+/webpack.config-test.web.cjs
 /test-results.xml
 /types/tslint.json
 /types/tsconfig.json
@@ -34,7 +33,7 @@
 /CODE_OF_CONDUCT.md
 /CONTRIBUTING.md
 /GOVERNANCE.md
-/babel.config.js
+/babel.config.cjs
 /.nvmrc
 /.browserlistrc
 
