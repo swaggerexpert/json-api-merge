@@ -35,6 +35,7 @@ jobs:
           extra_plugins: |
             @semantic-release/git
         env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Release published
         if: steps.semantic.outputs.new_release_published == 'true'
