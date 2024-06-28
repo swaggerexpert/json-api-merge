@@ -3,7 +3,7 @@
 [![Node CI](https://github.com/swaggerexpert/json-api-merge/workflows/Node.js%20CI/badge.svg)](https://github.com/swaggerexpert/json-api-merge/actions?query=workflow%3A%22Node.js+CI%22)
 [![Dependabot enabled](https://img.shields.io/badge/Dependabot-enabled-blue.svg)](https://dependabot.com/)
 [![try on RunKit](https://img.shields.io/badge/try%20on-RunKit-brightgreen.svg?style=flat)](https://npm.runkit.com/@swaggerexpert/json-api-merge)
-[![Tidelift](https://tidelift.com/badges/package/npm/swaggerexpert-json-api-merge)](https://tidelift.com/subscription/pkg/npm-swaggerexpert-json-api-merge?utm_source=npm-swaggerexpert-json-api-merge&utm_medium=referral&utm_campaign=readme)
+[![Tidelift](https://tidelift.com/badges/package/swaggerexpert/json-api-merge)](https://tidelift.com/subscription/pkg/npm-.swaggerexpert-json-api-merge&utm_medium=referral&utm_campaign=readme)
 
 
 # JSON API Merge
@@ -17,7 +17,7 @@
         <img src="https://cdn2.hubspot.net/hubfs/4008838/website/logos/logos_for_download/Tidelift_primary-shorthand-logo.png" alt="Tidelift" width="60" />
       </td>
       <td valign="middle">
-        <a href="https://tidelift.com/subscription/pkg/npm-swaggerexpert-json-api-merge?utm_source=npm-swaggerexpert-json-api-merge&utm_medium=referral&utm_campaign=readme">
+        <a href="https://tidelift.com/subscription/pkg/npm-.swaggerexpert-json-api-merge?utm_source=npm-swaggerexpert-json-api-merge&utm_medium=referral&utm_campaign=readme">
             Get professionally supported @swaggerexpert/json-api-merge with Tidelift Subscription.
         </a>
       </td>
