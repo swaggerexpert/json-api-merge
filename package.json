@@ -94,7 +94,7 @@
     "@babel/polyfill": "7.12.1",
     "@babel/preset-env": "7.27.2",
     "@babel/register": "7.27.1",
-    "@commitlint/cli": "19.8.0",
+    "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "19.8.0",
     "babel-loader": "10.0.0",
     "babel-plugin-add-module-exports": "^1.0.4",
