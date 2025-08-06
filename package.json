@@ -109,7 +109,7 @@
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-import": "=2.32.0",
     "eslint-plugin-mocha": "10.5.0",
-    "eslint-plugin-prettier": "5.5.3",
+    "eslint-plugin-prettier": "5.5.4",
     "eslint-plugin-ramda": "2.5.1",
     "glob": "=11.0.3",
     "husky": "9.1.7",
