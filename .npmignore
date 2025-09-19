@@ -1,6 +1,7 @@
 /.idea
 /.tmp
 /.github
+/.claude
 /coverage
 /node_modules
 /npm-debug.log
