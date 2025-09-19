@@ -2,5 +2,6 @@
 /dist
 /es
 /lib
+/types
 /tonicExample.js
 /tmp-test-bundle.js
