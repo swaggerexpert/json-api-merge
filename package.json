@@ -120,7 +120,7 @@
     "mocha-multi-reporters": "1.5.1",
     "nyc": "17.1.0",
     "prettier": "=3.6.2",
-    "ramda": "=0.31.3",
+    "ramda": "=0.32.0",
     "ramda-adjunct": "=5.1.0",
     "rimraf": "6.0.1",
     "sinon": "21.0.0",
