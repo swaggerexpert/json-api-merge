@@ -114,7 +114,7 @@
     "glob": "=11.0.3",
     "husky": "9.1.7",
     "istanbul": "=0.4.5",
-    "lint-staged": "16.2.4",
+    "lint-staged": "16.2.5",
     "mocha": "=11.7.4",
     "mocha-junit-reporter": "2.2.1",
     "mocha-multi-reporters": "1.5.1",
